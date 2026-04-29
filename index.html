@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ainsley Anderson | Technical Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            900: '#581c87',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.8); }
+        .data-table th { background-color: #f8fafc; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; color: #475569; padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        .data-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #e2e8f0; font-size: 0.875rem; color: #334155; }
+        .data-table tr:last-child td { border-bottom: none; }
+        .image-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 2rem; text-align: center; color: #64748b; transition: all 0.2s; position: relative; overflow: hidden;}
+        .image-placeholder:hover { background-color: #f1f5f9; border-color: #94a3b8; }
+        .image-placeholder::after { content: ''; position: absolute; inset: 0; background: linear-gradient(45deg, transparent 45%, rgba(0,0,0,0.02) 45%, rgba(0,0,0,0.02) 55%, transparent 55%); background-size: 10px 10px; z-index: 0; pointer-events: none; }
+        .placeholder-content { position: relative; z-index: 1; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-200 selection:text-brand-900">
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed w-full glass-panel z-50 transition-all shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-extrabold text-xl text-brand-900 tracking-tight">
+                    Ainsley Anderson
+                </div>
+                <div class="hidden lg:flex space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#extrusion" class="hover:text-brand-600 transition-colors">Extrusion Research</a>
+                    <a href="#rca-meal-kit" class="hover:text-brand-600 transition-colors">Commercial Scale-Up</a>
+                    <a href="#clif-winery" class="hover:text-brand-600 transition-colors">CPG Development</a>
+                    <a href="#operations" class="hover:text-brand-600 transition-colors">Operations & QA</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://linkedin.com/in/ainsley-anderson" target="_blank" class="text-slate-400 hover:text-brand-600 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Simplified Hero Section -->
+    <header class="pt-32 pb-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 leading-tight">
+                Food Scientist & <br class="hidden md:block">Operations Specialist
+            </h1>
+            <p class="text-lg text-slate-600 font-light max-w-2xl leading-relaxed mb-6">
+                Bridging culinary innovation, food chemistry, and Lean manufacturing to formulate complex product matrices and optimize them for high-volume, continuous production.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#extrusion" class="inline-flex justify-center items-center px-6 py-3 border border-slate-300 text-sm font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 shadow-sm transition-all">
+                    View Technical Portfolio ↓
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-16 space-y-32 bg-slate-50">
+        
+        <!-- PROJECT 1: Senior Project (FSN 457) -->
+        <section id="extrusion" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="scroll-margin-top: 6rem;">
+            <div class="mb-8">
+                <span class="text-brand-600 font-bold tracking-wider uppercase text-sm">R&D & Ingredient Functionality</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">Vegetable Waste Valorization in Extrusion</h2>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden p-8 lg:p-12">
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">Authored a technical manuscript investigating how to successfully incorporate vegetable waste (pomace) into extruded snacks. High-fiber waste streams typically cause severe structural failures in continuous-manufacturing lines; this research synthesized processing interventions to restore product expansion and texture.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">The Starch-Protein-Fiber Conflict</h3>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">Raw dietary fibers naturally disrupt the continuous starch-protein dough network inside an extruder. Through micro-mechanical analysis, the research identified two primary modes of failure:</p>
+                        <ul class="list-disc pl-5 space-y-2 text-sm text-slate-600 mb-6">
+                            <li><strong class="text-slate-800">Insoluble Fibers (Lignin):</strong> Act as rigid, physical roadblocks that cut through the expanding dough matrix, resulting in dense, brittle products.</li>
+                            <li><strong class="text-slate-800">Soluble Fibers (Pectin):</strong> Aggressively absorb moisture, starving the starches of the water needed to properly gelatinize and expand.</li>
+                        </ul>
+                        
+                        <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden mt-6 mb-6">
+                            <table class="w-full data-table">
+                                <thead><tr><th>Pomace Source</th><th>Physicochemical Impact</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="font-semibold text-slate-800">Carrot</td><td>High water-holding capacity; lignin acts as a physical wedge causing brittle matrices.</td></tr>
+                                    <tr><td class="font-semibold text-slate-800">Grape</td><td>Tannins chemically bind to starches and proteins, severely limiting cellular expansion.</td></tr>
+                                    <tr><td class="font-semibold text-slate-800">Beetroot</td><td>High pectin content rapidly scavenges moisture, altering the glass transition temperature.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Formulation Interventions</h3>
+                        <div class="space-y-4 mb-8">
+                            <div class="p-5 border border-brand-100 bg-brand-50 rounded-xl">
+                                <h4 class="font-bold text-brand-900 mb-2">Protein Hybridization (The "Glue")</h4>
+                                <p class="text-sm text-brand-800">Identified sunflower meal and pulse flours as vital crosslinking agents. The sulfur-containing amino acids in these proteins promote strong disulfide bonds.</p>
+                                <p class="text-xs text-brand-700 mt-2 font-medium bg-white/50 inline-block px-2 py-1 rounded">↳ Functional Value: Acts as a "glue" to stitch the torn fiber-starch matrix back together, allowing the dough to stretch and puff uniformly exiting the die.</p>
+                            </div>
+                            <div class="p-5 border border-slate-200 bg-white rounded-xl shadow-sm">
+                                <h4 class="font-bold text-slate-900 mb-2">Micronization Pre-Treatment</h4>
+                                <p class="text-sm text-slate-600">Recommends physical disruption (superfine grinding) of the pomace prior to extrusion to drastically reduce the particle size of insoluble fibers.</p>
+                                <p class="text-xs text-brand-600 mt-2 font-medium bg-brand-50 inline-block px-2 py-1 rounded border border-brand-100">↳ Functional Value: Converts rigid, abrasive fibers into smooth, functional hydrocolloids that reinforce the dough rather than puncturing it.</p>
+                            </div>
+                        </div>
+
+                        <!-- Visual Placeholder Block -->
+                        <div class="image-placeholder aspect-[16/9]">
+                            <div class="placeholder-content">
+                                <svg class="w-8 h-8 mb-2 mx-auto text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <span class="block font-semibold text-sm">Insert Diagram:</span>
+                                <span class="block text-xs mt-1">Starch-Protein-Fiber Network Mechanics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT 2: RCA Scale Up -->
+        <section id="rca-meal-kit" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="scroll-margin-top: 6rem;">
+            <div class="mb-8">
+                <span class="text-brand-600 font-bold tracking-wider uppercase text-sm">Industrial Scale-Up & Processing</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">Commercial Frozen Meal Kit Scale-Up</h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <!-- Visual Banner -->
+                <div class="bg-slate-900 px-8 py-10 flex flex-col md:flex-row items-center justify-between border-b border-slate-200 relative overflow-hidden">
+                    <div class="relative z-10 text-white max-w-2xl">
+                        <h3 class="text-2xl font-bold mb-2">2026 RCA Competition Blueprint</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">Directed the cross-functional development of a Korean-Chinese fusion product engineered specifically for high-volume manufacturing, cryogenic freezing (IQF), and MAP environments.</p>
+                        
+                        <div class="bg-slate-800/50 border-l-4 border-brand-500 p-4 rounded-r-lg">
+                            <p class="text-xs text-slate-300 italic leading-relaxed">
+                                <strong>Project Context:</strong> While this concept submission did not advance to the final competition round, the rigorous commercialization blueprint, continuous-line flowcharts, and matrix stabilization protocols developed stand as a robust, viable proof-of-concept for B2B frozen food manufacturing.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative z-10 mt-6 md:mt-0 flex gap-4">
+                        <span class="bg-brand-600/20 text-brand-200 border border-brand-500/30 px-4 py-2 rounded-lg font-bold text-sm text-center">44g<br><span class="text-xs font-normal">Protein</span></span>
+                        <span class="bg-slate-800 border border-slate-700 px-4 py-2 rounded-lg font-bold text-slate-200 text-sm text-center">12 Mo.<br><span class="text-xs font-normal">Target Shelf Life</span></span>
+                    </div>
+                </div>
+
+                <div class="p-8 lg:p-12">
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Matrix Chemistry -->
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 mb-6 uppercase tracking-wide">Matrix Stabilization</h4>
+                            <div class="space-y-6">
+                                <div>
+                                    <h5 class="font-semibold text-slate-800 text-sm">Chemical Leavening vs. Yeast Proofing (Bao Bun)</h5>
+                                    <p class="text-sm text-slate-600 mt-1">Utilized lactic acid from Greek yogurt to activate sodium bicarbonate, providing an immediate CO2 release to lift a heavy 12% upcycled carrot pomace load.</p>
+                                    <p class="text-xs text-brand-600 mt-1 font-medium">↳ Operational Value: Bypasses the manufacturing bottleneck of biological yeast proofing, which requires significant time and physical space on a factory floor.</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-slate-800 text-sm">Vacuum Protein Extraction (Seafood Binder)</h5>
+                                    <p class="text-sm text-slate-600 mt-1">Utilized vacuum tumbling (-0.8 bar) and a targeted potassium salt blend to extract myofibrillar proteins (actin and myosin) from the diced seafood.</p>
+                                    <p class="text-xs text-brand-600 mt-1 font-medium">↳ Functional Value: Creates a natural "meat glue" that holds the patty together through rigorous industrial rotary forming without relying on synthetic binders.</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-slate-800 text-sm">Sodium Reduction & Flavor Masking</h5>
+                                    <p class="text-sm text-slate-600 mt-1">Incorporated yeast extracts rich in 5'-ribonucleotides to trigger savory taste receptors, masking the metallic off-notes of potassium chloride to achieve a 50% sodium reduction.</p>
+                                    <p class="text-xs text-brand-600 mt-1 font-medium">↳ Operational Value: Flavors were encapsulated to prevent aromatic volatilization (flavor loss) during the 375°F industrial flash-frying step.</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-slate-800 text-sm">Shear-Thinning Rheology (Sauces)</h5>
+                                    <p class="text-sm text-slate-600 mt-1">Engineered a pseudoplastic (shear-thinning) sauce matrix using Xanthan Gum and FOS syrups.</p>
+                                    <p class="text-xs text-brand-600 mt-1 font-medium">↳ Functional Value: Ensures the sauce flows rapidly out of a high-speed factory filling nozzle, but instantly thickens up to cling to the hot cutlet on the consumer's plate.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Factory Scale-Up -->
+                        <div class="bg-slate-50 p-8 rounded-xl border border-slate-200">
+                            <h4 class="text-lg font-bold text-slate-900 mb-6 uppercase tracking-wide">Theoretical Factory Flow</h4>
+                            <ul class="space-y-4 relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                                <li class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div class="flex items-center justify-center w-5 h-5 rounded-full border-2 border-white bg-brand-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                                    <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
+                                        <h5 class="font-bold text-slate-800 text-sm mb-1">Rotary Forming</h5>
+                                        <p class="text-xs text-slate-600">Industrial formers extrude the sticky seafood emulsion into 85g patties at chilled temperatures (<38°F).</p>
+                                        <p class="text-[11px] text-slate-500 mt-1 italic">Why <38°F? Prevents the extracted proteins from denaturing prematurely before thermal processing.</p>
+                                    </div>
+                                </li>
+                                <li class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div class="flex items-center justify-center w-5 h-5 rounded-full border-2 border-white bg-brand-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                                    <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
+                                        <h5 class="font-bold text-slate-800 text-sm mb-1">Continuous Enrobing</h5>
+                                        <p class="text-xs text-slate-600">Triple-stage waterfall enrobing line calibrated for a precise ~20% coating pickup.</p>
+                                        <p class="text-[11px] text-slate-500 mt-1 italic">Why 3 stages? Anchors the batter deeply to the protein to prevent "blow-off" inside the fryer.</p>
+                                    </div>
+                                </li>
+                                <li class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div class="flex items-center justify-center w-5 h-5 rounded-full border-2 border-white bg-brand-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                                    <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm">
+                                        <h5 class="font-bold text-slate-800 text-sm mb-1">Thermal Processing</h5>
+                                        <p class="text-xs text-slate-600">Continuous frying (par-fry at 375°F) followed by a spiral convection oven to achieve a safe internal pasteurization temp (165°F).</p>
+                                    </div>
+                                </li>
+                                <li class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div class="flex items-center justify-center w-5 h-5 rounded-full border-2 border-white bg-brand-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                                    <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-brand-200 bg-brand-50 shadow-sm">
+                                        <h5 class="font-bold text-brand-900 text-sm mb-1">MAP & Cryogenic IQF</h5>
+                                        <p class="text-xs text-brand-800">Automated tray sealers backflush with 30% CO₂ / 70% N₂. A liquid nitrogen tunnel rapidly drops the core to 0°F.</p>
+                                        <p class="text-[11px] text-brand-700 mt-1 italic">Why Liquid Nitrogen? Fast freezing prevents large ice crystals from forming and rupturing the cellular structure of the food.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Image Gallery Placeholders -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+                        <div class="image-placeholder aspect-[16/9]">
+                            <div class="placeholder-content">
+                                <svg class="w-8 h-8 mb-2 mx-auto text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
+                                <span class="block font-semibold text-sm">Insert Photo:</span>
+                                <span class="block text-xs mt-1">Product Prototype or Packaging Mockup</span>
+                            </div>
+                        </div>
+                        <div class="image-placeholder aspect-[16/9]">
+                            <div class="placeholder-content">
+                                <svg class="w-8 h-8 mb-2 mx-auto text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                                <span class="block font-semibold text-sm">Insert Process Flow:</span>
+                                <span class="block text-xs mt-1">Continuous Freezing & Assembly Diagram</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT 3: Clif Family Winery -->
+        <section id="clif-winery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="scroll-margin-top: 6rem;">
+            <div class="mb-8">
+                <span class="text-brand-600 font-bold tracking-wider uppercase text-sm">Product Development & Commercialization</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">Clif Family Winery: Upcycled CPG Cookie</h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 lg:p-12">
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed">Developed a market-ready, gluten-free, and vegan wine-pairing cookie utilizing upcycled red wine grape pomace. Engineered the full commercialization strategy integrating a statistical Design of Experiments (DOE), a FSMA-compliant HACCP safety plan, and rigorous Cost of Goods Sold (COGS) evaluation to support a phased transition to a regional co-packer.</p>
+
+                <!-- Financial & QA Dashboard -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl relative overflow-hidden">
+                        <div class="text-sm font-bold text-slate-500 uppercase mb-2">Target Water Activity</div>
+                        <div class="text-3xl font-extrabold text-brand-600 mb-1">a<sub>w</sub> < 0.70</div>
+                        <div class="text-xs text-slate-500 relative z-10">Achieved via Tapioca Syrup & Date Sugar to ensure a >30 day ambient shelf life.</div>
+                        <div class="text-[10px] font-medium text-slate-400 mt-2 border-t border-slate-200 pt-2">Why? Values below 0.70 naturally inhibit yeast and mold growth without chemical preservatives.</div>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+                        <div class="text-sm font-bold text-slate-500 uppercase mb-2">Unit Economics (COGS)</div>
+                        <div class="text-3xl font-extrabold text-slate-800 mb-1">$3.73 <span class="text-lg font-medium text-slate-500">/ 6oz unit</span></div>
+                        <div class="text-xs text-slate-500">Breakdown: Ingredients ($2.76), Packaging ($0.85), Labeling ($0.12).</div>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl border-t-4 border-t-brand-500">
+                        <div class="text-sm font-bold text-slate-500 uppercase mb-2">Retail Margins</div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <div class="text-2xl font-bold text-slate-800">42.7%</div>
+                                <div class="text-xs text-slate-500">Tasting Room ($9.99)</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-brand-600">58.8%</div>
+                                <div class="text-xs text-slate-500">Food Truck ($6.00)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- DOE Section -->
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-4">Fractional Factorial DOE ($2^{4-1}$)</h4>
+                        <p class="text-sm text-slate-600 mb-4">Executed 8 batch variations targeting structure and moisture migration. Validated formulations using a Texture Profile Analyzer (to measure hardness, chewiness, and gumminess) alongside moisture analysis.</p>
+                        
+                        <div class="overflow-x-auto rounded-xl border border-slate-200 mb-6">
+                            <table class="w-full data-table min-w-[500px]">
+                                <thead>
+                                    <tr class="bg-slate-100"><th colspan="4" class="text-center border-b">Tested Variables</th><th class="text-center border-b border-l">Optimized Formulation</th></tr>
+                                    <tr><th>% Pomace</th><th>% Water</th><th>% Sugar</th><th>Hydrocolloid</th><th class="border-l bg-brand-50 text-brand-900">Winning Base</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>5%, 10%</td><td>2%, 6%</td><td>17%, 22%</td><td>Aquafaba, Flax</td><td class="border-l font-medium text-brand-800 bg-brand-50 text-center">5% Pomace, 6% Water, 22% Sugar, Flax Egg</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="p-4 border border-slate-200 bg-white rounded-xl shadow-sm mb-6">
+                            <h5 class="font-bold text-slate-900 text-sm mb-1">Functional Ingredient Selection: The "Flax Egg"</h5>
+                            <p class="text-sm text-slate-600">Since this is a vegan cookie, traditional egg proteins could not be used to bind the dough.</p>
+                            <p class="text-xs text-brand-600 mt-2 font-medium bg-brand-50 inline-block px-2 py-1 rounded border border-brand-100">↳ Operational Value: Flax mucilage mimics egg albumen, providing the necessary structural elasticity to prevent the cookie from crumbling on a high-speed packaging line.</p>
+                        </div>
+
+                        <!-- Graph Placeholder -->
+                        <div class="image-placeholder aspect-video">
+                            <div class="placeholder-content">
+                                <svg class="w-8 h-8 mb-2 mx-auto text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                                <span class="block font-semibold text-sm">Insert Data Chart:</span>
+                                <span class="block text-xs mt-1">Sensory "Just-About-Right" (JAR) Results</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HACCP Section -->
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-4">FSMA-Compliant HACCP Architecture</h4>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold text-xs mr-3 mt-1">CCP</div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-slate-800">Biological Kill Step</h5>
+                                    <p class="text-xs text-slate-600 mt-1">Convection bake at 350°F to achieve a minimum internal temperature ≥ 165°F, neutralizing vegetative pathogens like <em>Salmonella spp.</em></p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 font-bold text-xs mr-3 mt-1">CCP</div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-slate-800">Physical Hazards</h5>
+                                    <p class="text-xs text-slate-600 mt-1">Grape pomace sifted through automated screens to remove field debris. Final sealed trays pass through industrial metal detectors.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold text-xs mr-3 mt-1">CCP</div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-slate-800">Allergen Cross-Contact (Soy)</h5>
+                                    <p class="text-xs text-slate-600 mt-1">Vegan butter ingredient requires soy declaration. SSOPs mandate ATP/allergen swabbing of the line to confirm <5ppm residue between runs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Process Flow Placeholder -->
+                         <div class="image-placeholder aspect-[16/9]">
+                            <div class="placeholder-content">
+                                <svg class="w-8 h-8 mb-2 mx-auto text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                                <span class="block font-semibold text-sm">Insert Process Flow:</span>
+                                <span class="block text-xs mt-1">Commercialization HACCP Flowchart</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT 4 & 5: Operations & Safety (Side-by-Side) -->
+        <section id="operations" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24" style="scroll-margin-top: 6rem;">
+            <h2 class="text-2xl font-extrabold text-slate-900 mb-8 pb-4 border-b border-slate-200">Operational Optimization & QA Systems</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Lean Operations -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <span class="text-brand-600 font-bold tracking-wider uppercase text-xs">Lean Systems Consulting</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1 mb-6">High-Volume Production Line Optimization</h3>
+                        
+                        <p class="text-sm text-slate-600 mb-6">Applied Lean methodology to resolve severe production bottlenecks at a high-volume pizza restaurant, enabling the assembly line to sustain a peak throughput of 100 units/hour.</p>
+                        
+                        <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6 grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-semibold">Production Lead Time</div>
+                                <div class="text-xl font-bold text-slate-800">780s <span class="text-brand-500 font-normal">→ 592s</span></div>
+                                <div class="text-xs text-brand-600 font-medium">24% Reduction</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-semibold">Process Cycle Eff. (PCE)</div>
+                                <div class="text-xl font-bold text-slate-800">13% <span class="text-brand-500 font-normal">→ 16%</span></div>
+                                <div class="text-xs text-brand-600 font-medium">+3% Value Add</div>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div>
+                                    <span class="text-sm font-bold text-slate-800">Line Balancing & Pareto Analysis</span>
+                                    <p class="text-xs text-slate-600 mt-1">Identified a critical 45-second bottleneck at the sauce/cheese station. Reallocated steps to downstream stations and implemented volumetric standardizing.</p>
+                                    <p class="text-[11px] text-slate-500 italic mt-1">Why volumetric? Using measuring cups instead of scales saves ~5 seconds per unit, dropping overall cycle time to 30s.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div>
+                                    <span class="text-sm font-bold text-slate-800">Visual Controls (Kanban)</span>
+                                    <p class="text-xs text-slate-600 mt-1">Engineered an ingredient fill-line Kanban system and deployed a "Rush-Prep Checklist" to trigger proactive restocking.</p>
+                                    <p class="text-[11px] text-slate-500 italic mt-1">Why Kanban? Visual indicators tell operators to restock *before* they run out, eliminating motion waste during peak demand.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- VSM Placeholder -->
+                        <div class="image-placeholder aspect-[21/9] mt-auto">
+                            <div class="placeholder-content">
+                                <svg class="w-6 h-6 mb-2 mx-auto text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                                <span class="block font-semibold text-xs">Insert Chart: Value Stream Map or Pareto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sanitation Design -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <span class="text-brand-600 font-bold tracking-wider uppercase text-xs">Plant Design & Quality Assurance</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1 mb-6">Commercial Yogurt Facility QA Blueprint</h3>
+                        
+                        <p class="text-sm text-slate-600 mb-6">Engineered a comprehensive, FSMA-compliant 7-acre facility layout for a commercial yogurt plant, mitigating microbial cross-contamination via environmental controls.</p>
+
+                        <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6">
+                            <div class="text-xs text-slate-500 uppercase font-semibold mb-2">Critical Process Parameter</div>
+                            <div class="text-xl font-bold text-slate-800">HTST Pasteurization</div>
+                            <div class="text-sm text-brand-600 font-medium">172°F held for 15 seconds</div>
+                            <div class="text-xs text-slate-600 mt-1">Rapidly cooled & filtered prior to fermentation to eliminate spoilage organisms and pathogens.</div>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div>
+                                    <span class="text-sm font-bold text-slate-800">Hygienic Zoning & Site Logistics</span>
+                                    <p class="text-xs text-slate-600 mt-1">Mapped physical barriers between raw milk receiving (Zone 4) and post-pasteurization packaging (Zone 1).</p>
+                                    <p class="text-[11px] text-slate-500 italic mt-1">Operational Value: Positive air pressure in Zone 1 blows outward, ensuring airborne pathogens from raw processing cannot enter the sterile packaging area.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div>
+                                    <span class="text-sm font-bold text-slate-800">Facility Architecture</span>
+                                    <p class="text-xs text-slate-600 mt-1">Specified moisture-resistant materials, coved floor-to-wall junctions, and sloped trench drains.</p>
+                                    <p class="text-[11px] text-slate-500 italic mt-1">Operational Value: Coved (rounded) corners eliminate 90-degree angles, preventing stagnant water accumulation and destroying common Listeria harborages.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Zoning Map Placeholder -->
+                        <div class="image-placeholder aspect-[21/9] mt-auto">
+                            <div class="placeholder-content">
+                                <svg class="w-6 h-6 mb-2 mx-auto text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                                <span class="block font-semibold text-xs">Insert Floorplan: Hygienic Zoning Map</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="font-bold text-white text-xl mb-4">Ainsley Anderson</div>
+            <p class="text-sm mb-2">B.S. Food Science | Minor in Industrial Technology/Supply Chain</p>
+            <p class="text-xs text-slate-500">California Polytechnic State University, San Luis Obispo</p>
+        </div>
+    </footer>
+
+</body>
+</html>
